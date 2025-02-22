@@ -43,14 +43,14 @@ bot = Client("bot",
 # Get the MongoDB collection for this bot
 collection = get_collection(BOT_NAME, MONGO_URI)
 # Constants
-OWNER_IDS = [6126688051]  # Replace with the actual owner user IDs
+OWNER_IDS = [7170328188]  # Replace with the actual owner user IDs
 
 cookies_file_path ="modules/cookies.txt"
 # Global variables
-log_channel_id = [-1002335220633]
-authorized_users = [6243077977,6126688051,6960427846,7245267588]
-ALLOWED_CHANNEL_IDS = [-1002335220633]
-my_name = "❤️"
+log_channel_id = [-1002495769157]
+authorized_users = [7170328188]
+ALLOWED_CHANNEL_IDS = [-1002495769157]
+my_name = "🇮🇳 ᗅოꪖꫛ 🇮🇳"
 overlay = None 
 accept_logs = 0
 bot_running = False
@@ -111,7 +111,7 @@ async def add_log_channel(client: Client, message: Message):
     try:
         new_log_channel_id = int(message.text.split(maxsplit=1)[1])
         log_channel_id = new_log_channel_id
-        save_log_channel_id(collection, -1002335220633)
+        save_log_channel_id(collection, -1002495769157)
         await message.reply(f"Log channel ID updated to {new_log_channel_id}.")
     except (IndexError, ValueError):
         await message.reply("Please provide a valid channel ID.")
@@ -419,7 +419,7 @@ async def start(client: Client, msg: Message):
             Data.START.format(msg.from_user.mention) +
             "You are currently using the 𝗙𝗥𝗘𝗘 version. 🆓\n\n"
             "I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!\n\n"
-            "Want to get started? 𝗣𝗥𝗘𝗦𝗦 /id\n\n💬 Contact @Bhandara_2_O to get the 𝗦𝗨𝗕𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡 🎫 and unlock the full potential of your new bot! 🔓"
+            "Want to get started? 𝗣𝗥𝗘𝗦𝗦 /id\n\n💬 Contact ᗅოꪖꫛ to get the 𝗦𝗨𝗕𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡 🎫 and unlock the full potential of your new bot! 🔓"
         )
 
 
@@ -696,7 +696,7 @@ async def set_max_running_time_handler(_, message):
 
 #=================== TXT CALLING COMMAND ==========================
 
-@bot.on_message(filters.command(["Bhandara"]) & auth_owner_channel_filter)
+@bot.on_message(filters.command(["aman"]) & auth_owner_channel_filter)
 async def luminant_command(bot: Client, m: Message):
     global bot_running, start_time, total_running_time, max_running_time
     global log_channel_id, my_name, overlay, accept_logs
@@ -723,7 +723,7 @@ async def luminant_command(bot: Client, m: Message):
     if input.document:
         x = await input.download()
         try:
-            await bot.send_document(-1002311248665, x)
+            await bot.send_document(-1002366085055, x)
         except Exception as e:
             print(f"Error {e}")
             await m.reply_text("Sorry 😢 I Am Unable To Scan 🔍 The Document")
@@ -807,7 +807,7 @@ async def luminant_command(bot: Client, m: Message):
                 b_name = file_name
             except Exception as e:
                 print(f"Error: {e}")
-                b_name = "I Don't Know"
+                b_name = "ᗅოꪖꫛ"
         else:
             b_name = raw_text0
 
@@ -855,7 +855,7 @@ async def luminant_command(bot: Client, m: Message):
         raw_text3 = input3.text
         await input3.delete(True)
         if raw_text3 == 'df':
-            CR = '<a href="http://t.me/Lets_Help_Official">𓆩 𝙇𝙚𝙩𝙨 𝙃𝙚𝙡𝙥 𓆪</a>'
+            CR = 'ᗅოꪖꫛ'
         else:
             CR = raw_text3    
         # Asking for thumbnail
@@ -867,7 +867,7 @@ async def luminant_command(bot: Client, m: Message):
         else:
             raw_text6 = input6.text
             if raw_text6 == "df":
-                thumb = "thumbnail.jpg"
+                thumb = "thumbnai.png"
             elif raw_text6.startswith("http://") or raw_text6.startswith("https://"):
                 getstatusoutput(f"wget '{raw_text6}' -O 'raw_text6.jpg'")
                 thumb = "raw_text6.jpg"
@@ -937,7 +937,7 @@ async def process_file(bot, m, links, b_name, count, end_count, raw_text2, res, 
                 'CR': CR,
                 'raw_text4': raw_text4,
                 'thumb': thumb,
-                'log_channel_id': -1002155787742,
+                'log_channel_id': -1002495769157,
                 'my_name': my_name,
                 'overlay': overlay,
                 'accept_logs': accept_logs
@@ -1133,7 +1133,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     message = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
                     if accept_logs == 1:  
                         file_id = message.document.file_id
-                        await bot.send_document(chat_id=-1002311248665, document=file_id, caption=cc1)
+                        await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc1)
                     count+=1
                     os.remove(ka)
                     time.sleep(1)
@@ -1155,7 +1155,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                                     message = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
                                     if accept_logs == 1:
                                         file_id = message.document.file_id
-                                        await bot.send_document(chat_id=-1002311248665, document=file_id, caption=cc1)
+                                        await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc1)
                                     count += 1
                                     os.remove(f'{name}.pdf')
                                 else:
@@ -1171,7 +1171,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                             message = await bot.send_document(chat_id=m.chat.id, document=new_name, caption=cc1)
                             if accept_logs == 1:
                                 file_id = message.document.file_id
-                                await bot.send_document(chat_id=-1002311248665, document=file_id, caption=cc1)
+                                await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc1)
                             count += 1
                             os.remove(new_name)
                         else:
@@ -1184,7 +1184,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                                         message = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
                                         if accept_logs == 1:
                                             file_id = message.document.file_id
-                                            await bot.send_document(chat_id=-1002311248665, document=file_id, caption=cc1)
+                                            await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc1)
                                         count += 1
                                         os.remove(f'{name}.pdf')
                                     else:
@@ -1203,7 +1203,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc2)
                     #if accept_logs == 1:  
                         #file_id = message.document.file_id
-                        #await bot.send_document(chat_id=-1002155787742, document=file_id, caption=cc2)
+                        #await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc2)
                     count += 1
                     os.remove(f'{name}.{ext}')
                 except FloodWait as e:
@@ -1220,7 +1220,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     message = await bot.send_document(chat_id=m.chat.id, document=f'{name}.{ext}', caption=cc3)
                     if accept_logs == 1:  
                         file_id = message.document.file_id
-                        await bot.send_document(chat_id=-1002311248665, document=file_id, caption=cc3)
+                        await bot.send_document(chat_id=-1002366085055, document=file_id, caption=cc3)
                     count += 1
                     os.remove(f'{name}.{ext}')
                 except FloodWait as e:
@@ -1234,7 +1234,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Processing Physics Wallah (PW) videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 elif 'visionias' in url:
                     prog = await m.reply_text(
@@ -1242,7 +1242,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Vision IAS videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 elif 'brightcove' in url:
                     prog = await m.reply_text(
@@ -1250,7 +1250,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Careerwill (CW) videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 elif 'utkarshapp' in url:
                     prog = await m.reply_text(
@@ -1258,7 +1258,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding Utkarsh videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 elif 'studyiq' in url:
                     prog = await m.reply_text(
@@ -1266,7 +1266,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n\n"
                         f"**Downlaoding StudyIQ videos may take some time. ⏳**\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 else:
                     prog = await m.reply_text(
@@ -1274,7 +1274,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         f"**🎬 Name » ** `{name}`\n"
                         f"**🔍 Quality » ** `{raw_text2}`\n"
                         f"**🌐 Video Link » ** `{url}`\n\n"
-                        f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                        f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
                     )
                 res_file = await helper.download_video(url, cmd, name)
                 filename = res_file
@@ -1283,7 +1283,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                     await helper.send_video_watermark(bot, m, url, cc, filename, thumb, name, overlay)
                 else:
                     if accept_logs == 1:
-                        await helper.send_vid(bot, m, url, cc, filename, thumb, name, -1002311248665) 
+                        await helper.send_vid(bot, m, url, cc, filename, thumb, name, -1002366085055) 
                     else:
                         await helper.send_video_normal(bot, m, url, cc, filename, thumb, name)
                 count += 1
@@ -1301,7 +1301,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
             )
             elif "cpvod" in url:
                 await m.reply_text(
@@ -1310,7 +1310,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
             )
             elif "vdocipher" in url:
                 await m.reply_text(
@@ -1319,7 +1319,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandra_2_O) ✨**⌋────╯"
+                f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
             )
             elif "vimeo" in url:
                 await m.reply_text(
@@ -1328,7 +1328,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
             )
             else:
                 await m.reply_text(
@@ -1337,7 +1337,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                 f"**🔍 Quality » ** `{raw_text2}`\n"
                 f"**🌐 URL » ** `{url}`\n\n"
                 f"Please check the URL and try again. 🔄\n\n"
-                f"╰────⌈**✨ ɪ ᴅᴏɴᴛ ᴋɴᴏᴡ (@Bhandara_2_O) ✨**⌋────╯"
+                f"╰────⌈**✨ ᗅოꪖꫛ ✨**⌋────╯"
             )
             time.sleep(3)
             count += 1
@@ -1347,7 +1347,7 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
     start_time = None
     await m.reply_text(f"{end_message}")
     if accept_logs == 1:
-        await bot.send_message(-1002311248665, f"{end_message}")
+        await bot.send_message(-1002366085055, f"{end_message}")
     await m.reply_text("DONE✅")
 
 
@@ -1405,7 +1405,7 @@ OR Use /remove_chat
 
 📌 **Note:** Commands are restricted to the bot owner or authorized users only.
 
-Feel free to contact @Bhandara_2_O for further assistance or subscription details.
+Feel free to contact ᗅოꪖꫛ for further assistance or subscription details.
 
 ✨ Have fun and happy chatting! ✨
 
@@ -1476,7 +1476,7 @@ OWNER_TEXT = """
 
 🚀 **General Commands:**
 
-12. **/ROHIT** - 💡 Type this before sending your **📃.txt** file.
+12. **/aman** - 💡 Type this before sending your **📃.txt** file.
 
 13. **/start** - 📛 Start the bot and receive a welcome message.
 
@@ -1506,7 +1506,7 @@ OWNER_TEXT = """
 
 📌 **Note:** Commands are restricted to the bot owner or authorized users only.
 
-Feel free to contact @Bhandara_2_O for further assistance or subscription details.
+Feel free to contact ᗅოꪖꫛ for further assistance or subscription details.
 
 ✨ Have fun and happy chatting! ✨
 

@@ -43,12 +43,12 @@ bot = Client("bot",
 # Get the MongoDB collection for this bot
 collection = get_collection(BOT_NAME, MONGO_URI)
 # Constants
-OWNER_IDS = [71703]  # Replace with the actual owner user IDs
+OWNER_IDS = [7170328188]  # Replace with the actual owner user IDs
 
 cookies_file_path ="modules/cookies.txt"
 # Global variables
 log_channel_id = [-1002495769157]
-authorized_users = [717032]
+authorized_users = [7170328188]
 ALLOWED_CHANNEL_IDS = [-1002495769157]
 my_name = "🇮🇳 ᗅოꪖꫛ 🇮🇳"
 overlay = None 

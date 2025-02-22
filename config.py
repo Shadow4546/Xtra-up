@@ -1,6 +1,6 @@
-BOT_NAME = "Luminatbot"
-API_ID    = 21567814
-API_HASH  = "cd7dc5431d449fd795683c550d7bfb7e"
-BOT_TOKEN = "7662813243:AAEA3yIU_BZTCHR-lEXRFBelPfDdubYuRFA"
+BOT_NAME = "Assurexvk_bot"
+API_ID    = 28935416
+API_HASH  = "e18c05697d95edfe39d8957f6e110308"
+BOT_TOKEN = "7823447094:AAFQIXNDKgLGe-JIaUDHvo0c9fbGv8JwQ8s"
 #MONGO_URI = "mongodb+srv://psrathore1155:<db_password>@cluster0.rpaat.mongodb.net/"
 MONGO_URI = "mongodb+srv://mrnobody:modernhackers@mrnobody.q8e87ij.mongodb.net/?retryWrites=true&w=majority&appName=MrNobody"

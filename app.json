@@ -33,7 +33,7 @@
         },
         "MONGO_URI": {
             "description": "Enter your MongoDB connection string",
-            "value": "mongodb+srv://knight_rider:GODGURU12345@knight.jm59gu9.mongodb.net/?retryWrites=true&w=majority",
+            "value": "",
             "required": true
         }
     },

@@ -7,8 +7,8 @@
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/a46136352/Luminant-",
-    "success_url": "https://t.me/LuminantBots",
+    "repository": "https://github.com/Shadow4546/Xtra-up",
+    "success_url": "h",
     "stack": "container",
     "env": {
         "API_ID": {

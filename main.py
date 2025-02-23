@@ -1379,7 +1379,7 @@ OR Use /remove_chat
 
 🚀 **General Commands:**
 
-4. **/ROHIT** - 💡 Type this before sending your **📃.txt** file.
+4. **/aman** - 💡 Type this before sending your **📃.txt** file.
 
 5. **/start** - 📛 Start the bot and receive a welcome message.
 
